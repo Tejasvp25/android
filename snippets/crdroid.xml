@@ -2,15 +2,15 @@
 <manifest>
 
   <!-- crDroid additions -->
-  <project path="android" name="crdroidandroid/android" remote="crdroid" />
+  <project path="android" name="android" remote="trb" />
 
-  <project path="art" name="crdroidandroid/android_art" remote="crdroid" />
+  <project path="art" name="android_art" remote="trb" />
 
-  <project path="bionic" name="crdroidandroid/android_bionic" remote="crdroid" />
+  <project path="bionic" name="android_bionic" remote="trb" />
 
   <project path="bootable/recovery" name="crdroidandroid/android_bootable_recovery" remote="crdroid" />
 
-  <project path="build/make" name="crdroidandroid/android_build" remote="crdroid" >
+  <project path="build/make" name="android_build" remote="trb" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -20,7 +20,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project path="build/soong" name="crdroidandroid/android_build_soong" remote="crdroid" >
+  <project path="build/soong" name="android_build_soong" remote="trb" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -30,12 +30,14 @@
   <project path="external/arm-optimized-routines" name="crdroidandroid/android_external_arm-optimized-routines" remote="crdroid" />
   <project path="external/asus/stitchimage" name="crdroidandroid/android_external_asus_stitchimage" remote="crdroid" />
   <project path="external/cpu_features" name="crdroidandroid/android_external_cpu_features" remote="crdroid" />
+  <project path="external/compiler-rt" name="external_compiler-rt" remote="trb" />
   <project path="external/expat" name="crdroidandroid/android_external_expat" remote="crdroid" />
   <project path="external/faceunlock" name="crdroidandroid/android_external_faceunlock" remote="crdroid-gitlab" />
   <project path="external/freetype" name="crdroidandroid/android_external_freetype" remote="crdroid" />
   <project path="external/giflib" name="crdroidandroid/android_external_giflib" remote="crdroid" />
   <project path="external/harfbuzz_ng" name="crdroidandroid/android_external_harfbuzz_ng" remote="crdroid" />
-  <project path="external/jemalloc_new" name="crdroidandroid/android_external_jemalloc-new" remote="crdroid" />
+  <project path="external/honggfuzz" name="external_honggfuzz" remote="trb" />  
+  <project path="external/jemalloc_new" name="external_jemalloc_new" remote="trb" />
   <project path="external/libcxx" name="crdroidandroid/android_external_libcxx" remote="crdroid" />
   <project path="external/libhevc" name="crdroidandroid/android_external_libhevc" remote="crdroid" />
   <project path="external/libjpeg-turbo" name="crdroidandroid/android_external_libjpeg-turbo" remote="crdroid" />
@@ -44,19 +46,21 @@
   <project path="external/libyuv" name="crdroidandroid/android_external_libyuv" remote="crdroid" />
   <project path="external/lz4" name="crdroidandroid/android_external_lz4" remote="crdroid" />
   <project path="external/python/cpython2" name="crdroidandroid/android_external_python_cpython2" remote="crdroid" />
+  <project path="external/openssh" name="external_openssh" remote="trb" />
   <project path="external/scudo" name="crdroidandroid/android_external_scudo" remote="crdroid" />
   <project path="external/skia" name="crdroidandroid/android_external_skia" remote="crdroid" />
-  <project path="external/sqlite" name="crdroidandroid/android_external_sqlite" remote="crdroid" />
+  <project path="external/sqlite" name="external_sqlite" remote="trb" />
   <project path="external/vixl" name="crdroidandroid/android_external_vixl" remote="crdroid" />
   <project path="external/wpa_supplicant_8" name="crdroidandroid/android_external_wpa_supplicant_8" remote="crdroid" />
-  <project path="external/zlib" name="crdroidandroid/android_external_zlib" remote="crdroid" />
+  <project path="external/zlib-ng" name="android_external_zlib-ng" remote="trb" revision="rvc"/>
 
   <project path="frameworks/av" name="crdroidandroid/android_frameworks_av" remote="crdroid" />
-  <project path="frameworks/base" name="crdroidandroid/android_frameworks_base" remote="crdroid" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="trb" />
   <project path="frameworks/libs/systemui" name="crdroidandroid/android_frameworks_libs_systemui" remote="crdroid" />
   <project path="frameworks/native" name="crdroidandroid/android_frameworks_native" remote="crdroid" />
   <project path="frameworks/opt/net/wifi" name="crdroidandroid/android_frameworks_opt_net_wifi" remote="crdroid" />
   <project path="frameworks/opt/telephony" name="crdroidandroid/android_frameworks_opt_telephony" remote="crdroid" />
+  <project path="frameworks/rs" name="frameworks_rs" remote="trb" />
   <project path="frameworks/support/lottie" name="crdroidandroid/android_frameworks_support_lottie" remote="crdroid" />
 
   <project path="hardware/interfaces" name="crdroidandroid/android_hardware_interfaces" remote="crdroid" />
@@ -90,10 +94,9 @@
   <project path="packages/apps/Messaging" name="crdroidandroid/android_packages_apps_Messaging" remote="crdroid" />
   <project path="packages/apps/OmniStyle" name="crdroidandroid/android_packages_apps_OmniStyle" remote="crdroid" />
   <project path="packages/apps/PermissionController" name="crdroidandroid/android_packages_apps_PackageInstaller" remote="crdroid" />
-  <project path="packages/apps/Settings" name="crdroidandroid/android_packages_apps_Settings" remote="crdroid" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="trb" />
   <project path="packages/apps/SetupWizard" name="crdroidandroid/android_packages_apps_SetupWizard" remote="crdroid" />
   <project path="packages/apps/ThemePicker" name="crdroidandroid/android_packages_apps_ThemePicker" remote="crdroid" />
-  <project path="packages/apps/Updater" name="crdroidandroid/android_packages_apps_Updater" remote="crdroid" />
   <project path="packages/inputmethods/LatinIME" name="crdroidandroid/android_packages_inputmethods_LatinIME" remote="crdroid" />
   <project path="packages/services/OmniJaws" name="crdroidandroid/android_packages_services_OmniJaws" remote="crdroid" />
   <project path="packages/services/Telecomm" name="crdroidandroid/android_packages_services_Telecomm" remote="crdroid" />
@@ -101,6 +104,8 @@
 
   <project path="prebuilts/abi-dumps/vndk" name="crdroidandroid/android_prebuilts_abi-dumps_vndk" remote="crdroid" />
   <project path="prebuilts/build-tools" name="crdroidandroid/android_prebuilts_build-tools" clone-depth="1" remote="crdroid" />
+
+  <project path="prebuilts/clang/host/linux-x86" name="android_prebuilts_clang_host_linux-x86" clone-depth="1" remote="trb" revision="rvc" />
 
   <!-- Clang 13 version 13.0.2 -->
   <project path="prebuilts/clang/host/linux-x86/clang-latest" name="crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r433403" remote="crdroid-gitlab" />
